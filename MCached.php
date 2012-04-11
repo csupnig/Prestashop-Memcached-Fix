@@ -109,8 +109,12 @@ class MCachedCore extends Cache
 	private function getKey($query) {
 		$key = "";
 		$tables = $this->getTables($query);
-		foreach ($tables AS $table) {
-			$key.=$this->getTableNamespacePrefix($table);
+		if (is_array($tables)) {
+			foreach ($tables AS $table) {
+				$key.=$this->getTableNamespacePrefix($table);
+			}
+		} else {
+			$key.="nok".$tables;
 		}
 		$key.=$query;
 		return md5($key);
