@@ -1,3 +1,5 @@
 A fix for the prestashop caching system that has been tested with verison 1.4.6.2 on our shop http://applerel.ru
 
 It can be deployed by simply replacing the original files in prestashopbasedir/classes with the ones contained in this repository.
+
+Here is the bugreport on the prestashop bugtracker: http://forge.prestashop.com/browse/PSCFI-5402
